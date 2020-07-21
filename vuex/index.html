@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUEX</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.5.1/dist/vuex.js"></script>
+</head>
+<body>
+    <div id="app">
+        <titulo><titulo>
+    </div>
+    <script>
+        Vue.component('titulo',{
+            template:
+            `
+            <div>
+                <h1>Número: {{ $store.state.numeropadre }}</h1>
+                <hijo></hijo>
+            </div>
+            ` 
+
+        })
+
+        Vue.component('hijo',{
+            template:
+            `
+            <div>
+                <button @click="$store.commit('aumentar')">+</button>
+                <h1>Número: {{ $store.state.numerohijo }}</h1>
+            </div>
+            ` 
+        })
+
+        const store = new Vuex.Store({
+            state: {
+                numeropadre:10,
+                numerohijo: 15
+            },
+            mutations: {
+                aumentar(){
+                    this.state.numerohijo ++
+                }
+            }
+        });
+
+        new Vue({
+            el: '#app',
+            store: store
+        })
+
+    </script>
+</body>
+</html>
