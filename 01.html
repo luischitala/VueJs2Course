@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app">
+        <h1>{{message}}</h1>
+
+        <input type="text" v-model ="nuevaFruta" @keyup.enter="agregarFruta">
+        <button @click="agregarFruta"> Agregar</button>
+
+        <ul>
+            <li v-for="fruta of frutas">
+                <input type="number" v-model="fruta.cantidad">
+                 {{fruta.nombre}}
+                 <button @click="fruta.cantidad++">+</button>
+                <span v-if="fruta.cantidad === 0"> -Sin stock</span>
+            
+            </li>
+        </ul>
+        <h4>Total: {{sumarFrutas}}</h4>
+    </div>
+    <div id="app2" class="container mt-5">
+
+        <div :class="['p-3','text-white', fondo]">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Exercitationem aspernatur sint id debitis quaerat voluptatibus 
+                quibusdam eligendi, nostrum necessitatibus deserunt rem cumque ullam corrupti providen
+                t, nisi dolorem labore accusamus nemo.</p>
+        </div>
+        <input type="text" class="form-control my-3" v-model="fondo">
+
+        <div calss="text-white p-3" :class="{'bg-info' : color, 'bg-success' : !color}">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing 
+                elit. Consequuntur minus dolorem aliquid rerum molestias
+                 dolor error voluptates hic ad, voluptatem reprehenderit 
+                 omnis doloribus sint sequi, numquam esse eveniet libero labore?</p>
+
+        </div>
+        <button class="btn btn-primary" @click="color = !color">Cambiar</button>
+    </div>
+    <div id="app3" class="container">
+        <h3>{{mensaje}}</h3>
+        <h1>invertido: {{invertido}}</h1>
+        <input type="text" class="form-control" v-model="mensaje">
+        <button class="btn btn-primary" @click="contador++">+</button>
+        <button class="btn btn-danger" @click="contador--">-</button>
+        <h3>{{contador}}</h3>
+        <div class="progress">
+            <div class="progress-bar " role="progressbar"
+            :style="{width: contador+'%'}" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"
+            :class="color"
+            >{{contador}}</div>
+        </div>
+    </div>
+    <div id="app4" class="container">
+        <h1>{{saludo}}</h1>
+        <button @click="saludo = 'saludo cambiado'" >Cambiar</button>
+        <button @click="destruir()">Destruír</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="01.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas de Menús</title>
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!-- Font Awesome -->
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/ad8dd70d61.js" crossorigin="anonymous"></script>
+<!-- EStilos -->
+<link rel="stylesheet" href="estilos.css">
+<script src="components/tarjeta.js"></script>
+</head>
+<body>
+<div class="container">Hola</div>
+<div class="container">Hola</div>
+<div class="container mt-5" id="app">
+    <div class="row">
+        
+        <div class="col-4" style="padding-left:10px"> 
+           
+        </div>
+        <div class="col-4"> 
+            <div class="card card-hover border border-secondary rounded img-fluid position-absolute zoom" style=" height:314px; width:262px;  background-image: url('selected.png'); max-height:314px;" >
+                <div class="card-body" style="padding-top: -5px; z-index:2; position-absolute">
+                <div class="row t-info">
+                    <div class="col-4"  >
+                        <span class="fcircular" >
+                        <img src="descarga.png" class="rounded-circle z-depth-2 shadow" height="55" width="55" alt="100x100" style="padding-bottom: 5px;">
+                        </span>
+                    </div>
+                        <div class="col-8" padding-right="0">
+                        
+                        <div class="row"> 
+                            <div class="col-3" style="color:white">3</h7></div>
+                            <div class="col-9 d-flex justify-content-end" style="padding: top 25;">  
+                                <div class="row" style="padding-top: 4px;">
+                                    <i class="fas fa-star" style="color:gold"></i>
+                                    <i class="fas fa-star" style="color:gold"></i>
+                                    <i class="fas fa-star" style="color:gold"></i>
+                                    <i class="fas fa-star" style="color:grey"></i>
+                                    <i class="fas fa-star" style="color:grey"></i>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="row">
+                           <h5 class="t-tarjeta" style="font-size: 15px; padding-left: 15px; padding-top:10px; color:white;">C.S Tlajomulco</h5>
+                        </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="max-height: 50px; padding-top:10px;">
+                        <div class="tb-tarjeta rounded" style="background-color: #00d74e;">
+                            <h5 class="ct-tarjeta" style="font-size: 10px; text-align:center; color:white;" >Disponible en urgencias </h5>
+                            <h5 class="ct-tarjeta" style="font-size: 10px; text-align:center; color:white;" >Servicio 24 horas</h5>
+                            <h5 class="ct-tarjeta" style="font-size: 10px; text-align:center; color:white;" >Equipamento completo</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="padding-top: 20px; text-align:center;">
+                        <button class="btn btn-light shadow" style="font-size: 10px; display:inline-block;">REGISTRAR EMERGENCIA</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <ul style="padding-left: 0; padding-top:10px; ">
+                            <li style="list-style-type: none;"><a href="" style="color: white; text-decoration:none;">ESPECIALIDADES</a></li>
+                            <li style="list-style-type: none;"><a href="" style="color: white; text-decoration:none;">SERVICIOS</a></li>
+                            <li style="list-style-type: none;"><a href="" style="color: white; text-decoration:none;">PRECIOS</a></li>
+                            <li style="list-style-type: none;"><a href="" style="color: white; text-decoration:none;">CONTACTO</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <tarjeta></tarjeta>
+    </div>
+</div>
+
+
+<script>
+    new Vue({
+        el: '#app'
+    });
+</script>
+</body>
+</html>
